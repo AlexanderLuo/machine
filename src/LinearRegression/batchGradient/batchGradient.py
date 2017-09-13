@@ -12,6 +12,7 @@ def loopTheta(x,y,theta):
 
 
 
+
 def fit(x, y):
     theta=np.array([0,0])
     x = np.column_stack((np.array(np.ones(len(x))), x))
