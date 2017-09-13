@@ -21,21 +21,18 @@ diabetes_X_train = diabetes_X[:-20]
 # ###目标划分为训练集和测试集
 diabetes_y_train = diabetes.target[:-20]
 # diabetes_y_test = diabetes.target[-20:]
-theta=batchGradient.fit(diabetes_X_train,diabetes_y_train)
+theta = batchGradient.fit(diabetes_X_train, diabetes_y_train)
 print(theta)
 
+plt.plot(diabetes_X_train, diabetes_y_train, 'rx')
 
 
 
-plt.plot(diabetes_X_train,diabetes_y_train,'rx')
-
-
-
-# x = np.linspace(-0.2, 0.2)
-# y = theta[0][0]+theta[0][1]*x
+x = np.linspace(-0.1, 0.18)
+y = theta[1]+theta[0]*x
 #
-# plt.plot(x,y)
-# plt.show()
+plt.plot(x,y)
+plt.show()
 
 
 # ###训练模型
@@ -49,4 +46,3 @@ plt.plot(diabetes_X_train,diabetes_y_train,'rx')
 # plt.xticks()
 # plt.yticks()
 # plt.show()
-
